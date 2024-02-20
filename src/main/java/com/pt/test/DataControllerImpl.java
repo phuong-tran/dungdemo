@@ -65,7 +65,7 @@ public class DataControllerImpl implements DataController<SampleData> {
     private void removeOldItems(long currentTimeInSec) {
         long outOfDatedTimeStamp = currentTimeInSec - autoDeleteInSec;
         subject
-                .filter(data -> data.getTimeStamp() >= outOfDatedTimeStamp)
+                .filter(data -> data.getTimeStampInSec() >= outOfDatedTimeStamp)
                 .toList()
                 .subscribe();
     }

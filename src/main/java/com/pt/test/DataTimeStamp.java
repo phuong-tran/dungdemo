@@ -3,7 +3,7 @@ package com.pt.test;
 abstract class DataTimeStamp {
     private final long timeStampInSec;
 
-    public long getTimeStamp() {
+    public long getTimeStampInSec() {
         return timeStampInSec;
     }
 

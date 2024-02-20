@@ -50,7 +50,7 @@ public class DataControllerImpl implements DataController<SampleData> {
      */
     @Override
     public void addData(SampleData data) {
-        System.out.println("data " + data);
+        subject.onNext(data);
     }
 
     /**
@@ -58,7 +58,7 @@ public class DataControllerImpl implements DataController<SampleData> {
      */
     @Override
     public void onData(SampleData data) {
-
+        System.out.println("Receive Data " + data);
     }
 
 

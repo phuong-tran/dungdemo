@@ -30,11 +30,11 @@ public class App {
         return Observable.interval(1, TimeUnit.SECONDS)
                 .observeOn(Schedulers.io())
                 .subscribe(timeStamp -> {
-                    long currentTime = TimeUnit.SECONDS.convert(
+                    long currentTimeInSec = TimeUnit.SECONDS.convert(
                             System.currentTimeMillis(),
                             TimeUnit.MILLISECONDS
                     );
-                    controller.addData(new SampleData(currentTime, "A", 20));
+                    controller.addData(new SampleData(currentTimeInSec, "A", 20));
                 });
     }
 
